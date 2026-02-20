@@ -1,8 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// nuxt.config.ts
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/content',
-  ],
+  compatibilityDate: '2026-02-20',
   devtools: { enabled: true },
-  compatibilityDate: '2024-04-03',
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.NUXT_SUPABASE_URL,
+      supabasePublishableKey: process.env.NUXT_SUPABASE_PUBLISHABLE_KEY,
+    },
+  },
 })

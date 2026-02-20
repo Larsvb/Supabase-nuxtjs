@@ -1,37 +1,35 @@
-# Nuxt dev/build outputs
-.nuxt/
-.output/
-.data/
-.nitro/
-.cache/
-dist/
-.temp/
-
-# Node dependencies
+# Node modules
 node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Nuxt build / output
+.nuxt/
+dist/
+.nuxt-storybook/
+
+# Environment files (keep secrets out of Git)
+.env
+.env.*.local
 
 # Logs
-logs/
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Environment variables (secrets)
-.env
-.env.*
-!.env.example
-
-# OS / Editor junk
+# Mac / Linux system files
 .DS_Store
-Thumbs.db
-.fleet
-.idea/
+*.swp
+*.swo
+
+# Editor directories
 .vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
 
-# Test coverage
+# Optional: local test / temp folders
+.cache/
 coverage/
-
-# Package manager lockfile
-pnpm-lock.yaml
