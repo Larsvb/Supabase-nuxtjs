@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Monument Extended Bold';
+    src: url('~/assets/fonts/MonumentExtended-Ultrabold.otf')  format('opentype'),
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    src: url('~/assets/fonts/MonumentExtended-Regular.otf')  format('opentype'),
+}
+
+@font-face {
+    font-family: 'Akrobat Bold';
+    src: url('~/assets/fonts/Akrobat-ExtraBold.otf')  format('opentype'),
+}
+
+@font-face {
+    font-family: 'Akrobat ExtraBold';
+    src: url('~/assets/fonts/Akrobat-Bold.otf')  format('opentype'),
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-secondary text-white rounded-lg hover:opacity-90 transition-opacity;
+  }
+
+  .container-base {
+    @apply max-w-container mx-auto px-lg;
+  }
+
+  .section-base {
+    @apply py-4xl;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Monument Extended Bold', sans-serif;
+  text-transform: uppercase;
+}
+
+li, p, span {
+  font-family: 'Akrobat Bold', sans-serif;
+}

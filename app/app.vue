@@ -1,24 +1,24 @@
-<script setup>
-const { $supabase } = useNuxtApp()
-const Tags = ref([])
+<script setup lang="ts">
+import '~/assets/css/tailwind.css'
 
-async function getTags() {
-  const { data, error } = await $supabase
-    .from('Tags')
-    .select('id, title')
+// const { $supabase } = useNuxtApp()
+// const Tags = ref([])
 
-  if (error) {
-    console.error('Error fetching Tags:', error)
-  } else {
-    Tags.value = data
-  }
-}
+// async function getTags() {
+//   const { data, error } = await $supabase
+//     .from('Tags')
+//     .select('id, title')
 
-onMounted(() => getTags())
+//   if (error) {
+//     console.error('Error fetching Tags:', error)
+//   } else {
+//     Tags.value = data
+//   }
+// }
+
+// onMounted(() => getTags())
 </script>
 
 <template>
-  <ul>
-    <li v-for="Tag in Tags" :key="Tag.id">{{ Tag.title }}</li>
-  </ul>
+  <NuxtPage />
 </template>
