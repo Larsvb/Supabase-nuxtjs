@@ -1,27 +1,19 @@
-import type { Config } from 'tailwindcss'
-
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     './app/**/*.{js,ts,vue}',
+    './app/**/**/*.{js,ts,vue}',
   ],
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-
-        },
-        secondary: {
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-
-        },
+        primary: '#667eea',
+        secondary: '#764ba2',
         accent: '#f472b6',
         success: '#10b981',
         warning: '#f59e0b',
         error: '#ef4444',
-        gray: {
+        neutral: {
           50: '#f9fafb',
           100: '#f3f4f6',
           200: '#e5e7eb',
@@ -46,30 +38,6 @@ export default {
         '5xl': '5rem',
         '6xl': '6rem',
       },
-      padding: {
-        xs: '0.25rem',
-        sm: '0.5rem',
-        md: '1rem',
-        lg: '1.5rem',
-        xl: '2rem',
-        '2xl': '2.5rem',
-        '3xl': '3rem',
-        '4xl': '4rem',
-        '5xl': '5rem',
-        '6xl': '6rem',
-      },
-      margin: {
-        xs: '0.25rem',
-        sm: '0.5rem',
-        md: '1rem',
-        lg: '1.5rem',
-        xl: '2rem',
-        '2xl': '2.5rem',
-        '3xl': '3rem',
-        '4xl': '4rem',
-        '5xl': '5rem',
-        '6xl': '6rem',
-      },
       width: {
         xs: '20rem',
         sm: '24rem',
@@ -81,8 +49,6 @@ export default {
         '4xl': '56rem',
         '5xl': '64rem',
         '6xl': '72rem',
-        full: '100%',
-        screen: '100vw',
       },
       maxWidth: {
         container: '1200px',
@@ -90,4 +56,5 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config
+}
+
