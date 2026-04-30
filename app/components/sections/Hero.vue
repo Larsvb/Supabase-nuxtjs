@@ -2,14 +2,16 @@
 </script>
 
 <template>
-  <section class="hero w-full h-screen">
+  <section class="hero bg-sec w-full h-screen">
     <div class="hero-wrapper">
       <div class="hero__grid w-full h-screen">
         <div class="hero__grid-item hero__grid-item--1">
           <img src="https://placehold.co/320x320" alt="Profile picture" class="object-cover">
         </div>
         <div class="hero__grid-item hero__grid-item--2">
-          <h1 class="hero__title">Frontend<br>developer</h1>
+          <h1 class="hero__title">
+            Frontend<br>developer
+          </h1>
         </div>
         <div class="hero__grid-item hero__grid-item--3">
           <ul class="hero__meta-list">
@@ -19,10 +21,15 @@
           </ul>
         </div>
         <div class="hero__grid-item hero__grid-item--4">
-          <h2 class="hero_subtitle">With UI/UX experience</h2>
+          <h2 class="hero__subtitle">
+            With <span class="text-ter">UI/UX</span> experience
+          </h2>
         </div>
       </div>
     </div>
+    <!-- <div class="hero__overlay">
+      <img src="assets/images/hero_overlay.svg" alt="Decorative overlay image" class="w-full object-contain">
+    </div> -->
   </section>
 </template>
 
@@ -76,6 +83,10 @@
     line-height: 0.8;
   }
 
+  &__subtitle {
+    font-size: 2.2rem;
+  }
+
   &__meta-list {
     list-style: none;
     padding: 0;
@@ -84,6 +95,15 @@
     li {
       margin-bottom: 8px;
     }
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: -130px;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    pointer-events: none;
   }
 }
 

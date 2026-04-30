@@ -1,10 +1,12 @@
 <script setup lang="ts">
   import Hero from '~/components/sections/Hero.vue'
   import About from '~/components/sections/About.vue'
+  import BlurOverlay from '~/components/ui/BlurOverlay.vue'
 </script>
 
 <template>
   <div class="page">
+    <BlurOverlay />
     <Hero />
     <About />
   </div>
